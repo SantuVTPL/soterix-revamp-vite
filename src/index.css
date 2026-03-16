@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+
+  /* FONT */
+  --font-primary: "Inter", sans-serif;
+
+  /* FONT SIZES */
+  --font-size-h1: 24px;
+  --font-size-h2: 20px;
+  --font-size-body: 16px;
+  --font-size-sm: 14px;
+  --font-size-caption: 12px;
+  --font-size-tiny: 10px;
+
+  /* FONT WEIGHTS */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* LINE HEIGHT */
+  --line-height-auto: normal;
+
+  /* BACKGROUNDS */
+  --surface: #03171F;
+  --empty-camera-view: #1D292E;
+  --sidebar: #192529;
+  --top-nav: #1F2F34;
+  --tree-body: #293236;
+  --tree-head: #3B4345;
+
+  /* TEXT */
+  --text-primary: #E2E3E3;
+  --text-secondary: #B4B7B8;
+  --text-tertiary: #A5A8A9;
+
+  /* BUTTON */
+  --button-default: #17B2EB;
+  --button-disable: #3D484D;
+  --button-hover: #1CC2FF;
+  --button-secondary-hover: #073241;
+  --button-cta: #0B4A62;
+  --button-custom: #1E2121;
+  
+  /* BORDERS */
+  --border: #5A5F60;
+  --border2: #313838;
+  --border3: #0699CE;
+  --brand: #127CA3;
+
+  /* STATUS */
+  --alert-danger: #FB462E;
+  --event-danger: #FF1F00;
+  --warning: #F9C817;
+  --success: #07A25C;
+
+  /* OBJECT COLORS */
+  --object: #FF6161;
+  --people: #0FA8D7;
+  --vehicle: #4C8AE6;
+}
+
+@theme inline {
+
+  /* FONT */
+  --font-sans: var(--font-primary);
+
+  /* FONT SIZE */
+  --text-h1: var(--font-size-h1);
+  --text-h2: var(--font-size-h2);
+  --text-body: var(--font-size-body);
+  --text-sm: var(--font-size-sm);
+  --text-caption: var(--font-size-caption);
+  --text-tiny: var(--font-size-tiny);
+
+  /* BACKGROUND */
+  --color-surface: var(--surface);
+  --color-empty-camera-view: var(--empty-camera-view);
+  --color-sidebar: var(--sidebar);
+  --color-top-nav: var(--top-nav);
+  --color-tree-body: var(--tree-body);
+  --color-tree-head: var(--tree-head);
+
+  /* TEXT */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  /* BUTTON */
+  --color-button-default: var(--button-default);
+  --color-button-disable: var(--button-disable);
+  --color-button-hover: var(--button-hover);
+  --color-button-secondary-hover: var(--button-secondary-hover);
+  --color-button-cta: var(--button-cta);
+  --color-button-custom: var(--button-custom);
+
+  /* BORDERS */
+  --color-border: var(--border);
+  --color-border2: var(--border2);
+  --color-border3: var(--border3);
+
+  /* BRAND */
+  --color-brand: var(--brand);
+
+  /* STATUS */
+  --color-alert-danger: var(--alert-danger);
+  --color-event-danger: var(--event-danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+
+  /* OBJECT COLORS */
+  --color-object: var(--object);
+  --color-people: var(--people);
+  --color-vehicle: var(--vehicle);
+
+}
+
+body {
+    background: var(--surface);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-regular);
+    line-height: var(--line-height-auto);
+    letter-spacing: 0%;
+}
