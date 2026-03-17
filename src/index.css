@@ -22,43 +22,61 @@
   /* LINE HEIGHT */
   --line-height-auto: normal;
 
-  /* BACKGROUNDS */
+  /* BORDER RADIUS */
+  --radius8: 8px;
+  --radius4: 4px;
+  --button-radius30: 30px;
+  --radius20: 20px;
+
+  /* ICON STOKE */
+  --icon-stroke: 1.2;
+
+  /* GLASSMORPHISM */
+  --camera-pill: #12121260;
+
+  /* SURFACE */
   --surface: #03171F;
-  --empty-camera-view: #1D292E;
+  --menubar: #1F2F34;
+  --tree-surface: #293236;
+  --tree-head-surface: #3B4345;
+  --empty-camera: #1D292E;
   --sidebar: #192529;
-  --top-nav: #1F2F34;
-  --tree-body: #293236;
-  --tree-head: #3B4345;
 
   /* TEXT */
   --text-primary: #E2E3E3;
   --text-secondary: #B4B7B8;
   --text-tertiary: #A5A8A9;
+  --text-black-pill: #E2E3E3;
 
   /* BUTTON */
   --button-default: #17B2EB;
+  --button-primary-text: #1F2F34;
   --button-disable: #3D484D;
   --button-hover: #1CC2FF;
   --button-secondary-hover: #073241;
   --button-cta: #0B4A62;
   --button-custom: #1E2121;
+  --button-highlighted: #4CCEFE;
   
   /* BORDERS */
   --border: #5A5F60;
   --border2: #313838;
   --border3: #0699CE;
-  --brand: #127CA3;
 
-  /* STATUS */
+  /* ALERT */
   --alert-danger: #FB462E;
+  --alert-warning: #F9C817;
+  --alert-success: #07A25C;
   --event-danger: #FF1F00;
-  --warning: #F9C817;
-  --success: #07A25C;
 
-  /* OBJECT COLORS */
+  /* TIMELINE */
   --object: #FF6161;
   --people: #0FA8D7;
-  --vehicle: #4C8AE6;
+  --vehicle: #FFB900;
+  --action-pill: #00000050;
+  --timeline-events: #12121240;
+  --timeline-scrubber: #00000050;
+  --timeline-header: #00000032;
 }
 
 @theme inline {
@@ -74,26 +92,44 @@
   --text-caption: var(--font-size-caption);
   --text-tiny: var(--font-size-tiny);
 
+  /* BORDER RADIUS */
+  --radius8: var(--radius8);
+  --radius4: var(--radius4);
+  --button-radius30: var(--button-radius30);
+  --radius20: var(--radius20);
+
+  /* ICON STOKE */
+  --icon-stroke: var(--icon-stroke);
+
+  /* GLASSMORPHISM */
+  --camera-pill: var(--camera-pill);
+
   /* BACKGROUND */
   --color-surface: var(--surface);
-  --color-empty-camera-view: var(--empty-camera-view);
+  --color-menubar: var(--menubar);
+  --color-tree-surface: var(--tree-surface);
+  --color-tree-head-surface: var(--tree-head-surface);
+  --color-empty-camera: var(--empty-camera);
   --color-sidebar: var(--sidebar);
-  --color-top-nav: var(--top-nav);
-  --color-tree-body: var(--tree-body);
-  --color-tree-head: var(--tree-head);
+
+  /* BRAND */
+  --brand: #127CA3;
 
   /* TEXT */
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-tertiary: var(--text-tertiary);
+  --color-text-black-pill: var(--text-black-pill);
 
   /* BUTTON */
   --color-button-default: var(--button-default);
+  --color-button-primary-text: var(--button-primary-text);
   --color-button-disable: var(--button-disable);
   --color-button-hover: var(--button-hover);
   --color-button-secondary-hover: var(--button-secondary-hover);
   --color-button-cta: var(--button-cta);
   --color-button-custom: var(--button-custom);
+  --color-button-highlighted: var(--button-highlighted);
 
   /* BORDERS */
   --color-border: var(--border);
@@ -105,15 +141,18 @@
 
   /* STATUS */
   --color-alert-danger: var(--alert-danger);
+  --color-alert-warning: var(--alert-warning);
+  --color-alert-success: var(--alert-success);
   --color-event-danger: var(--event-danger);
-  --color-warning: var(--warning);
-  --color-success: var(--success);
 
-  /* OBJECT COLORS */
+  /* TIMELINE */
   --color-object: var(--object);
   --color-people: var(--people);
   --color-vehicle: var(--vehicle);
-
+  --color-action-pill: var(--action-pill);
+  --color-timeline-events: var(--timeline-events);
+  --color-timeline-scrubber: var(--timeline-scrubber);
+  --color-timeline-header: var(--timeline-header);
 }
 
 body {

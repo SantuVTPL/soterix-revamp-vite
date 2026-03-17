@@ -1,9 +1,12 @@
 import './App.css'
+import SearchInput from './component/mui/search-input'
 
 function App() {
 
   return (
-    <h1 className="text-h1">Hello World!</h1>
+    <div className='p-2'>
+      <SearchInput  />
+    </div>
   )
 }
 
