@@ -1,11 +1,11 @@
 import './App.css'
-import SearchInput from './component/mui/search-input'
+import CustomSwitch from './component/mui/custom-switch'
 
 function App() {
 
   return (
     <div className='p-2'>
-      <SearchInput  />
+      <CustomSwitch />
     </div>
   )
 }

@@ -1,14 +1,13 @@
-import { TextField, type TextFieldProps, InputAdornment } from "@mui/material";
+import { TextField, type TextFieldProps } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Search } from "@icon-park/react";
 
 // ============================================
-// SEARCH INPUT
-// Pill-shaped search input with search icon
+// PLAIN TEXT INPUT
+// Pill-shaped text input
 // States: default, hover, active, disabled
 // ============================================
 
-const StyledSearchInput = styled(TextField)(() => ({
+const StyledPlainTextInput = styled(TextField)(() => ({
   "& .MuiOutlinedInput-root": {
     backgroundColor: "var(--menubar)",
     borderRadius: "var(--button-radius30)",
@@ -62,50 +61,26 @@ const StyledSearchInput = styled(TextField)(() => ({
       },
     },
   },
-
-  "& .MuiInputAdornment-root": {
-    color: "var(--text-tertiary)",
-    marginRight: "8px",
-  },
-
-  "& .Mui-focused .MuiInputAdornment-root": {
-    color: "var(--button-default)"
-  },
-
-  "& .Mui-disabled .MuiInputAdornment-root": {
-    color: "var(--button-primary-text)"
-  },
 }));
 
-export interface SearchInputProps extends Omit<TextFieldProps, "variant"> {
+export interface PlainTextInputProps extends Omit<TextFieldProps, "variant"> {
   placeholder?: string;
 }
 
-export function SearchInput({
-  placeholder = "Search",
+export function PlainTextInput({
+  placeholder = "Placeholder",
   disabled = false,
   ...props
-}: SearchInputProps) {
+}: PlainTextInputProps) {
   return (
-    <StyledSearchInput
+    <StyledPlainTextInput
       variant="outlined"
       placeholder={placeholder}
       disabled={disabled}
       autoComplete="off"
-      slotProps={{
-        input: {
-          startAdornment: (
-            <InputAdornment position="start">
-              <Search
-                size={16}
-              />
-            </InputAdornment>
-          ),
-        },
-      }}
       {...props}
     />
   );
 }
 
-export default SearchInput;
+export default PlainTextInput;

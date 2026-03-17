@@ -1,22 +1,21 @@
-import { TextField, type TextFieldProps, InputAdornment } from "@mui/material";
+import { TextField, type TextFieldProps } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Search } from "@icon-park/react";
 
 // ============================================
-// SEARCH INPUT
-// Pill-shaped search input with search icon
+// STANDARD INPUT
+// Square shaped text input
 // States: default, hover, active, disabled
 // ============================================
 
-const StyledSearchInput = styled(TextField)(() => ({
+const StyledStandardInput = styled(TextField)(() => ({
   "& .MuiOutlinedInput-root": {
-    backgroundColor: "var(--menubar)",
-    borderRadius: "var(--button-radius30)",
+    backgroundColor: "var(--surface)",
+    borderRadius: "var(--radius8)",
     fontFamily: "var(--font-primary)",
     fontSize: "var(--font-size-sm)",
     color: "var(--text-tertiary)",
     height: "41px",
-    padding: "12px",
+    padding: "10px 16px",
     transition: "all 0.2s ease-in-out",
 
     "& fieldset": {
@@ -26,7 +25,7 @@ const StyledSearchInput = styled(TextField)(() => ({
     },
 
     "&.Mui-focused": {
-        backgroundColor: "var(--menubar) !important",
+        backgroundColor: "var(--surface) !important",
     },
 
     "&:hover": {
@@ -62,50 +61,34 @@ const StyledSearchInput = styled(TextField)(() => ({
       },
     },
   },
-
-  "& .MuiInputAdornment-root": {
-    color: "var(--text-tertiary)",
-    marginRight: "8px",
-  },
-
-  "& .Mui-focused .MuiInputAdornment-root": {
-    color: "var(--button-default)"
-  },
-
-  "& .Mui-disabled .MuiInputAdornment-root": {
-    color: "var(--button-primary-text)"
-  },
 }));
 
-export interface SearchInputProps extends Omit<TextFieldProps, "variant"> {
+export interface StandardInputProps extends Omit<TextFieldProps, "variant"> {
   placeholder?: string;
 }
 
-export function SearchInput({
-  placeholder = "Search",
+export function StandardInput({
+  placeholder = "Placeholder",
   disabled = false,
+  label,
   ...props
-}: SearchInputProps) {
+}: StandardInputProps) {
   return (
-    <StyledSearchInput
-      variant="outlined"
-      placeholder={placeholder}
-      disabled={disabled}
-      autoComplete="off"
-      slotProps={{
-        input: {
-          startAdornment: (
-            <InputAdornment position="start">
-              <Search
-                size={16}
-              />
-            </InputAdornment>
-          ),
-        },
-      }}
-      {...props}
-    />
+    <div>
+        {
+            label && (
+                <p className="text-sm mb-2">{label}</p>
+            )
+        }
+        <StyledStandardInput
+          variant="outlined"
+          placeholder={placeholder}
+          disabled={disabled}
+          autoComplete="off"
+          {...props}
+        />
+    </div>
   );
 }
 
-export default SearchInput;
+export default StandardInput;
